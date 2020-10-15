@@ -1,0 +1,13 @@
+language: java
+dist: trusty
+
+jdk:
+- oraclejdk11
+- oraclejdk9
+- oraclejdk8
+
+script:
+  - cd initial && ./gradlew check && cd ..
+  - cd documented && ./gradlew check && cd ..
+  - cd instrumenting && ./gradlew check && cd ..
+  - cd complete && ./gradlew check && cd ..
